@@ -2,6 +2,15 @@ import React from "react";
 import Person from "./Person";
 
 function NameList() {
+  const names = ["abc", "xyz", "pqr", "abc"];
+  //index as key anti-pattern
+  const nameList = names.map((name, index) => (
+    <h2 key={index}>
+      {index}
+      {name}
+    </h2>
+  ));
+  return <div>{nameList}</div>;
   const persons = [
     {
       id: 1,
@@ -25,10 +34,10 @@ function NameList() {
   //keys five stable identity
   //helps to identify which items have chnaged ,added, removed.
   //it is special attribute you neeed to include when creating lists of elements
-  const PersonList = persons.map((person) => (
-    <Person key={person.id} person={person}></Person>
-  ));
-  return <div>{PersonList}</div>;
+  // const PersonList = persons.map((person) => (
+  //   <Person key={person.id} person={person}></Person>
+  // ));
+  // return <div>{PersonList}</div>;
 
   //   const PersonList = persons.map((person) => (
   //     <h2>
@@ -37,7 +46,6 @@ function NameList() {
   //   ));
   //   return <div>{PersonList}</div>;
 
-  //   const names = ["abc", "xyz", "pqr"];
   //   const nameList = names.map((names) => <h2>{names}</h2>);
   //   return (
   //     <div>
