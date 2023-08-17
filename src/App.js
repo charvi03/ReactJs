@@ -21,8 +21,8 @@ import HoverCounter from "./components/HoverCounter";
 function App() {
   return (
     <div className="App">
-      <HoverCounter />
-      <ClickCounter />
+      {/* <HoverCounter />
+      <ClickCounter name="Charvi " /> */}
       {/* <LifeCycleA /> */}
       {/* <Form /> */}
       {/* <h1 className="error">Error</h1>
